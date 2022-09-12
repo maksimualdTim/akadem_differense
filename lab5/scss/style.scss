@@ -1,0 +1,127 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.header{
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  z-index: 150;
+  &__contacts{
+    padding-top: 15px;
+    padding-bottom: 25px;
+    &-inner{
+      display: flex;
+      justify-content: space-between;
+    }
+    &-city,
+    &-phone{
+      display: flex;
+      & > div:first-child{
+        margin-right: 65px;
+      }
+    }
+  }
+  &__logos{
+    &-icon{
+      margin-right: 30px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    &-icons{
+      display: flex;
+    }
+    &-inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-menu-burger{
+      display: flex;
+      align-items: center;
+      &:hover:before{
+        cursor: pointer;
+      }
+      &:before{
+        content: url("../images/icons/burger.svg");
+        padding-right: 12px;
+      }
+    }
+
+    margin-bottom: 36px;
+  }
+
+  &__nav-menu{
+    display: flex;
+    justify-content: space-between;
+    &-item{
+      position: relative;
+      &:last-child{
+        padding-right: 30px;
+        &:after{
+          padding-left: 6px;
+          content: url("../images/icons/arrow_down.svg");
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+
+.city{
+  position: relative;
+  & > p::after{
+    content: url("../images/icons/arrow_down.svg");
+    position: absolute;
+    padding-left: 5px;
+  }
+}
+.slider{
+  color: #fff;
+  display: flex;
+  &__item{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  &__title{
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 110px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  &__info{
+    margin-top: 316px;
+  }
+  &__description{
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 40px;
+    width: 630px;
+  }
+}
+.slick-dots{
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  button{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    font-size: 0;
+    border: none;
+  }
+}
+.slick-active{
+  & > button{
+    background-color: #AD2131;
+  }
+}
